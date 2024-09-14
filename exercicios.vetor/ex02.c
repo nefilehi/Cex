@@ -1,22 +1,26 @@
 /******************************************************************************
 
-Welcome to GDB Online.
-GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
-C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
-Code, Compile, Run and Debug online from anywhere in world.
+exercicio vetor com 10 espaços descobrir o maior, o menor
+e a media.
 
 *******************************************************************************/
 #include <stdio.h>
 
 int main()
 {
-    int vetor[10], maior, menor, media, i;
-    maior = 1;
-    menor = 1;
+    int vetor[10], maior, menor, i;
+    float media;
+    
     for(i=0;i<10;i++){
         printf("\n Entre com valor para posição %i: ", i);
         scanf("%i", &vetor[i]);
         media += vetor[i];
+    }
+    
+    maior = vetor[0];
+    menor = vetor[0];
+    
+    for(i=0;i<10;i++){
         if(vetor[i] > maior){
             maior = vetor[i];
         }
@@ -24,6 +28,7 @@ int main()
             menor = vetor[i];
         }
     }
+    
     media = media / 10;
     printf("\nO maior é %i, o menor é %i, e a media é %i", maior, menor, media);
     
